@@ -2,6 +2,9 @@
 
 import React from 'react'
 import { FieldErrors, FieldValues, UseFormRegister } from 'react-hook-form';
+import { BsFillArrowUpLeftSquareFill } from 'react-icons/bs';
+import { BiDollar } from "react-icons/bi";
+
 
 interface InputProps {
     id: string;
@@ -10,7 +13,7 @@ interface InputProps {
     disabled: boolean;
     required?: boolean;
     register: UseFormRegister<FieldValues>;
-    errors: FieldErrors
+    errors: FieldErrors;
 }
 
 const Input: React.FC<InputProps> = ({ id, label, type = "text", disabled, register, required, errors }) => {
