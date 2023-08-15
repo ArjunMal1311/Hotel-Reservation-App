@@ -45,7 +45,7 @@ const LoginPage = () => {
             <div className="bg-white px-4 py-4 sm:px-8 sm:py-16 rounded w-2/5 flex justify-center">
                 <div className='w-3/5'>
                     <h2 className="text-2xl font-semibold mb-4 head_text purple_gradient">Login Here!</h2>
-                    <form onSubmit={handleSubmit(onSubmit)}>
+                    <form onSubmit={handleSubmit(onSubmit)} className='mb-4'>
                         <div className="mb-4">
                             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                                 Email
