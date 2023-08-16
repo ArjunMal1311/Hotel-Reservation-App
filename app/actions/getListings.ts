@@ -9,6 +9,7 @@ export interface ListingsParams {
     endDate?: string;
     locationValue?: string;
     category?: string;
+    createdAt: Date;
 }
 
 export default async function getListings(params: ListingsParams) {
@@ -73,7 +74,7 @@ export default async function getListings(params: ListingsParams) {
             }
         });
 
-        const safeListings = listings.map((listing) => ({
+        const safeListings = listings.map((listing: ListingsParams) => ({
             ...listing,
             createdAt: listing.createdAt.toISOString(),
         }))
