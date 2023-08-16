@@ -4,11 +4,9 @@ import Heading from './components/Heading';
 import getListings, { ListingsParams } from './actions/getListings';
 import Card from './components/Card';
 
-
 interface HomeProps {
   searchParams: ListingsParams
 };
-
 
 const Home = async ({ searchParams }: HomeProps) => {
   const user = await getCurrentUser();

@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { AiOutlineMenu } from "react-icons/ai"
 import Avatar from './Avatar';
 import Link from 'next/link';
+import { signOut } from 'next-auth/react';
 
 interface NavbarProps {
     currentUser?: SafeUser | null;
@@ -40,6 +41,8 @@ const Navbar: React.FC<NavbarProps> = ({ currentUser }) => {
                                     <>
                                         <div className='px-4 py-3 hover:bg-neutral-300 transition font-semibold cursor-pointer' onClick={() => router.push('/profile')}>Hello, {currentUser.name}</div>
                                         <div className='px-4 py-3 hover:bg-neutral-300 transition font-semibold cursor-pointer' onClick={() => router.push('/addListing')}>Add a property</div>
+                                        <div className='px-4 py-3 hover:bg-neutral-300 transition font-semibold cursor-pointer' onClick={() => router.push('/mytrips')}>My Trips</div>
+                                        <div className='px-4 py-3 hover:bg-neutral-300 transition font-semibold cursor-pointer' onClick={() => signOut()}>Sign Out</div>
                                     </>
 
                                 ) : (
