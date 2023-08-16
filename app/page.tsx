@@ -13,7 +13,7 @@ const Home = async ({ searchParams }: HomeProps) => {
   const listings = await getListings(searchParams);
 
   return (
-    <div>
+    <div className='m-4'>
       <div className='mx-auto md:px-6 sm:px-2 mt-10'>
         <h4 className='purple_gradient text-4xl font-bold mb-3'>Travel your plan with us!</h4>
         <Heading title="Trending Properties" />

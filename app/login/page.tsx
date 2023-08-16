@@ -41,9 +41,9 @@ const LoginPage = () => {
     }
 
     return (
-        <div className="flex mt-10 items-center justify-center ">
-            <div className="bg-white px-4 py-4 sm:px-8 sm:py-16 rounded w-2/5 flex justify-center">
-                <div className='w-3/5'>
+        <div className="flex mt-10 items-center justify-center">
+            <div className="bg-white px-4 py-4 rounded w-full md:w-2/5 flex justify-center mx-4">
+                <div className='w-full lg:w-3/5'>
                     <h2 className="text-2xl font-semibold mb-4 head_text purple_gradient">Login Here!</h2>
                     <form onSubmit={handleSubmit(onSubmit)} className='mb-4'>
                         <div className="mb-4">

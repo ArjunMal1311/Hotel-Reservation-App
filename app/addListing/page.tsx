@@ -89,7 +89,7 @@ const Page = () => {
                         <div>
                             <Heading title="Step 1: Select Category" />
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-h-[65vh] overflow-y-auto">
-                                {categories.map((item) => (
+                                {categories.map((item: any) => (
                                     <div key={item.label} className="col-span-1">
                                         <CategoryItem
                                             onClick={(category) => setCustomValue('category', category)}
