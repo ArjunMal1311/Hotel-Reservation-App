@@ -24,7 +24,7 @@ const page = async () => {
       {reservations.length === 0 ? <div className='m-6'>
         <h2 className='text-4xl purple_gradient font-bold mb-8'>No trips found!</h2>
         <Link href="/" className='mt-8 border-2 p-4 rounded-lg'>Book a property</Link>
-      </div> : <div>
+      </div> : <div className='m-3'>
         <Trips reservations={reservations} currentUser={user} />
       </div>}
     </>
