@@ -1,16 +1,25 @@
-import Image from 'next/image'
 import { getCurrentUser } from './actions/getCurrentUser'
 import Heading from './components/Heading';
 import getListings, { ListingsParams } from './actions/getListings';
 import Card from './components/Card';
+import Link from 'next/link';
 
 interface HomeProps {
   searchParams: ListingsParams
 };
 
 const Home = async ({ searchParams }: HomeProps) => {
-  const user = await getCurrentUser();
   const listings = await getListings(searchParams);
+  const user = await getCurrentUser();
+
+  if (listings.length === 0) {
+    return (
+      <div className='m-6'>
+        <h2 className='text-4xl purple_gradient font-bold mb-8'>No properties are listed</h2>
+        <Link href="/addListing" className='mt-8 border-2 p-4 rounded-lg'>Add a property</Link>
+      </div>
+    );
+  }
 
   return (
     <div className='m-4'>
