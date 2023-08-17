@@ -1,15 +1,11 @@
 import { getCurrentUser } from './actions/getCurrentUser'
 import Heading from './components/Heading';
-import getListings, { ListingsParams } from './actions/getListings';
+import getListings from './actions/getListings';
 import Card from './components/Card';
 import Link from 'next/link';
 
-interface HomeProps {
-  searchParams: ListingsParams
-};
-
-const Home = async ({ searchParams }: HomeProps) => {
-  const listings = await getListings(searchParams);
+const Home = async () => {
+  const listings = await getListings();
   const user = await getCurrentUser();
 
   if (listings.length === 0) {
