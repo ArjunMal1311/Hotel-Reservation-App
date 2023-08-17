@@ -1,6 +1,6 @@
 import { getCurrentUser } from './actions/getCurrentUser'
 import Heading from './components/Heading';
-import getListings from './actions/getListings';
+import getListings from './actions/getAllListings';
 import Card from './components/Card';
 import Link from 'next/link';
 
