@@ -1,10 +1,18 @@
 import prisma from "@/app/libs/prismadb";
 
+export interface ListingsParams {
+    userId?: string;
+    guestCount?: number;
+    roomCount?: number;
+    bathroomCount?: number;
+    startDate?: string;
+    endDate?: string;
+    locationValue?: string;
+    category?: string;
+}
 
 export default async function getAllListings() {
     try {
-
-
         const listings = await prisma.listing.findMany({
             orderBy: {
                 createdAt: 'desc'
